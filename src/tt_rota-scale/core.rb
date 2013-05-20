@@ -17,7 +17,7 @@ module TT::Plugins::RotaScale
   
   unless file_loaded?( __FILE__ )
     # Menus
-    m = TT.menu( 'Tools' )
+    m = UI.menu( 'Tools' )
     m.add_item( PLUGIN_NAME ) { self.scale_3d }
   end
 
@@ -308,14 +308,11 @@ module TT::Plugins::RotaScale
   # @example
   #   TT::Plugins::RotaScale.reload
   #
-  # @param [Boolean] tt_lib Reloads TT_Lib2 if +true+.
-  #
   # @return [Integer] Number of files reloaded.
   # @since 1.0.0
-  def self.reload( tt_lib = false )
+  def self.reload
     original_verbose = $VERBOSE
     $VERBOSE = nil
-    TT::Lib.reload if tt_lib
     # Core file (this)
     load __FILE__
     # Supporting files

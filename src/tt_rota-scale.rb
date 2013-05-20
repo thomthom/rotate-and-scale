@@ -20,7 +20,7 @@ module TT
   PLUGIN          = self
   PLUGIN_ID       = 'TT_RotaScale'.freeze
   PLUGIN_NAME     = 'Rotate and Scale'.freeze
-  PLUGIN_VERSION  = '0.4.0'.freeze
+  PLUGIN_VERSION  = '0.4.1'.freeze
   
   # Resource paths
   FILENAMESPACE = File.basename( __FILE__, '.rb' )
