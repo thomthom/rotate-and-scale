@@ -239,8 +239,8 @@ module TT::Plugins::RotaScale
           scale = len2 / len1
           
           screen_xy = view.screen_coords(@reference_point1.position)
-          #view.draw_text(screen_xy, "Angle: #{angle.radians.round_to(1)}° - Scale: #{scale.round_to(3)}")
-          view.draw_text(screen_xy, "Angle: #{PLUGIN.round_to(angle.radians,1)}° - Scale: #{PLUGIN.round_to(scale,3)}")
+          #view.draw_text(screen_xy, "Angle: #{angle.radians.round_to(1)}Â° - Scale: #{scale.round_to(3)}")
+          view.draw_text(screen_xy, "Angle: #{PLUGIN.round_to(angle.radians,1)}Â° - Scale: #{PLUGIN.round_to(scale,3)}")
           
           @drawn = true
         end
