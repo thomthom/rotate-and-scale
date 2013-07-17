@@ -13,23 +13,23 @@ require 'extensions.rb'
 module TT
  module Plugins
   module RotaScale
-  
+
   ### CONSTANTS ### ------------------------------------------------------------
-  
+
   # Plugin information
   PLUGIN          = self
   PLUGIN_ID       = 'TT_RotaScale'.freeze
   PLUGIN_NAME     = 'Rotate and Scale'.freeze
-  PLUGIN_VERSION  = '0.4.1'.freeze
-  
+  PLUGIN_VERSION  = '0.4.2'.freeze
+
   # Resource paths
   FILENAMESPACE = File.basename( __FILE__, '.rb' )
   PATH_ROOT     = File.dirname( __FILE__ ).freeze
   PATH          = File.join( PATH_ROOT, FILENAMESPACE ).freeze
-  
-  
+
+
   ### EXTENSION ### ------------------------------------------------------------
-  
+
   unless file_loaded?( __FILE__ )
     loader = File.join( PATH, 'core.rb' )
     ex = SketchupExtension.new( PLUGIN_NAME, loader )
@@ -39,7 +39,7 @@ module TT
     ex.creator     = 'Thomas Thomassen (thomas@thomthom.net)'
     Sketchup.register_extension( ex, true )
   end
-  
+
   end # module RotaScale
  end # module Plugins
 end # module TT
